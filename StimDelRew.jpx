@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--JBuilder XML Project-->
+<project>
+  <property category="javadoc" name="custom.tags.1" value="todo;a;To Do:"/>
+  <property category="optimize.0" name="OptimizableType" value="com.borland.jbuilder.optimize.IntroOptimizeitProfiler"/>
+  <property category="runtime" name="ConfigurationCount" value="4"/>
+  <property category="runtime" name="DefaultConfiguration" value="-1"/>
+  <property category="runtime.0" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.0" name="ConfigurationName" value="MasterTraining"/>
+  <property category="runtime.0" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.0" name="application.class" value="stimdelrew.MasterTraining"/>
+  <property category="runtime.0" name="application.vmparameters" value="-Xmx512m -Xss8m"/>
+  <property category="runtime.1" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.1" name="ConfigurationName" value="InitialTraining"/>
+  <property category="runtime.1" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.1" name="application.class" value="stimdelrew.InitialTraining"/>
+  <property category="runtime.1" name="application.vmparameters" value="-Xmx512m -Xss8m"/>
+  <property category="runtime.2" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.2" name="ConfigurationName" value="PreTraining"/>
+  <property category="runtime.2" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.2" name="application.class" value="stimdelrew.PreTraining"/>
+  <property category="runtime.2" name="application.vmparameters" value="-Xmx512m -Xss8m"/>
+  <property category="runtime.3" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.3" name="ConfigurationName" value="Convert"/>
+  <property category="runtime.3" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.3" name="application.class" value="stimdelrew.Convert"/>
+  <property category="runtime.3" name="application.parameters" value="E:\GRSNC\StimulusDelayReward\Java\StimDelRew\PostTraining\ StimDelRew"/>
+  <property category="runtime.3" name="application.vmparameters" value="-Xmx512m -Xss8m"/>
+  <property category="runtime.4" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.4" name="ConfigurationName" value="PostTraining"/>
+  <property category="runtime.4" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.4" name="application.class" value="stimdelrew.PostTraining"/>
+  <property category="runtime.4" name="application.parameters" value="E:\GRSNC\StimulusDelayReward\Data\StimDelRew_MasterData_20080516_23h55"/>
+  <property category="runtime.4" name="application.vmparameters" value="-Xmx512m -Xss8m"/>
+  <property category="serverservices" name="disabled.services" value="connector;jdatastore"/>
+  <property category="serverservices" name="single.server.name" value="Tomcat 4.0"/>
+  <property category="sys" name="AuthorLabel" value="@author"/>
+  <property category="sys" name="BackupPath" value="bak"/>
+  <property category="sys" name="CheckStable" value="1"/>
+  <property category="sys" name="Company" value="Universit\u00e9 de Montr\u00e9al"/>
+  <property category="sys" name="CompanyLabel" value="Company:"/>
+  <property category="sys" name="Copyright" value="Copyright (c) 2008"/>
+  <property category="sys" name="CopyrightLabel" value="Copyright:"/>
+  <property category="sys" name="DefaultPath" value="src"/>
+  <property category="sys" name="Description" value="Trace conditioning simulation of cortico-striato-dopamine model"/>
+  <property category="sys" name="DescriptionLabel" value="Description:"/>
+  <property category="sys" name="DocPath" value="doc"/>
+  <property category="sys" name="ExcludeClassEnabled" value="0"/>
+  <property category="sys" name="IncludeTestPath" value="1"/>
+  <property category="sys" name="InstanceVisibility" value="2"/>
+  <property category="sys" name="JDK" value="java version 1.4.1_02-b06"/>
+  <property category="sys" name="JvmVersion" value="1.2"/>
+  <property category="sys" name="LastTag" value="0"/>
+  <property category="sys" name="Libraries" value=""/>
+  <property category="sys" name="MakeStable" value="0"/>
+  <property category="sys" name="OutPath" value="classes"/>
+  <property category="sys" name="SourcePath" value="src;test"/>
+  <property category="sys" name="TestPath" value="test"/>
+  <property category="sys" name="Title" value="Stimulus Delay Reward"/>
+  <property category="sys" name="TitleLabel" value="Title:"/>
+  <property category="sys" name="Version" value="1.0"/>
+  <property category="sys" name="VersionLabel" value="@version"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+  <node name="Standard Doclet" type="Javadoc">
+    <property category="docletJavadoc" name="deprecated" value="0"/>
+    <property category="javadoc" name="documentAllPackages" value="0"/>
+    <property category="javadoc" name="packages.1" value="grsnc.binb"/>
+    <property category="javadoc" name="packages.2" value="lnsc"/>
+    <property category="javadoc" name="packages.3" value="lnsc.lstm"/>
+    <property category="javadoc" name="packages.4" value="lnsc.page"/>
+    <property category="javadoc" name="packages.5" value="lnsc.pmvf"/>
+    <property category="javadoc" name="packages.6" value="lnsc.unsup"/>
+    <property category="javadoc" name="packages.7" value="stimdelrew"/>
+    <property category="javadoc" name="packages.8" value="stimulusdelayreward"/>
+    <property category="javadoc" name="packages.9" value="stimulusdelayrewardanalyzer"/>
+    <property category="javadoc" name="scope" value="public"/>
+    <property category="nodeJavadoc" name="directory" value="doc"/>
+    <property category="nodeJavadoc" name="displayAllOutput" value="0"/>
+  </node>
+  <file path="ChangesLog.txt"/>
+  <file path="src/stimdelrew/Convert.java"/>
+  <file path="src/stimdelrew/InitialTraining.java"/>
+  <file path="src/stimdelrew/MasterTraining.java"/>
+  <file path="src/stimdelrew/PostTraining.java"/>
+  <file path="src/stimdelrew/PreTraining.java"/>
+  <file path="runcondor.sh"/>
+  <file path="StimDelRew.html"/>
+</project>

@@ -1,0 +1,59 @@
+<html>
+
+<head><meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+<!--
+  Copyright (c) 1998-2008 François Rivest LNSC
+  All Rights Reserved.
+--></head>
+
+<body><p>The LNSC (Laboratory for Natural and Simulated Cognition) package, contains
+the lab neural network simulator. This extremely flexible and extensible package
+includes numerous variations of <i> Cascade-Correlation</i> neural networks
+(including thh&nbsp; <i>Knowledge-Based</i> version) and <i>Backpropagation</i> neural networks.
+It also contains an implementation of <i>KBANN </i>as well as <i>Optimal Brain
+Damage</i> algorithm for cascaded networks. It contains many
+type of nodes and can easily be extended to use user-defined type of nodes.
+Similarly it contains many optimization algorithms and can easily be extended to
+user defined-ones. It also uses user-defined stopping criteria and can compute
+at run-time any user-defined statistics about the network under training on
+training and testing data or undergo any other user-defined analysis operation.
+Finally, all these, including the networks themselves can be recorded and
+saved for further analysis.</p>
+
+<p>&nbsp;</p>
+
+<p>The library spirit is to make every single piece of a learning system a block
+and to build learning algorithm from these blocks. The building blocks of the
+library stand in one class and few interfaces.&nbsp;</p>
+
+<ul>
+  <li>The class&nbsp; <a href="DataSet.html">DataSet</a>&nbsp; is a general data
+    holder. It is used to put training or testing data and to gather outputs as
+    well as intermediate results and calculations.&nbsp;</li>
+  <li>The interface <a href="FunctionalUnit.html">FunctionalUnit</a> provides
+    the general interface for any&nbsp; classifier or function approximator. A
+    functional unit is a real-vector-valued multi-variate function that may or
+    may not be differentiable. For example, single processing element in neural
+    networks as well as whole networks are functional units. (The library
+    contains around 17 functional units.)</li>
+  <li>The <a href="page/Index.html">page</a> subpackage provide the necessary
+    interface to build artificial agent moving in artificial world like game
+    playing program, artificial grid-world, etc...</li>
+  <li>Others subpackages are not necessarly part of the LNSC package.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p> This is actually only a subset of the LNSC package. <p>
+
+<p>The code of this library is the property of Thomas R. Shultz and Francois
+Rivest. The conceptual structure of this library is the intellectual property of
+Francois Rivest. This package was developed for research purpose and any
+commercial use, and non-educational use is strictly prohibited unless explicit
+written consent is given by the author Francois Rivest. Copyright 1997-2008.</p></body>
+
+</html>

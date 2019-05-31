@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><!--
+  Copyright (c) 2003~2008 François Rivest
+  All Rights Reserved.
+--></head>
+
+<body bgcolor="white"><h1>PAGE: Percepts, Actions, Goals, Environment</h1>
+
+This package contains the definition of the basic interfaces for an
+agent/environement simulator. It is based on <i>page</i> definition from
+Russell & Norvig (1995).
+
+<h2>Description:</h2>
+
+<p>Classes with the {@link lnsc.page.Environment} interface are considered as
+environements or artificial worlds and classes with the {@link lnsc.page.Agent}
+interface are considered artificial animated objects (intelligent or not).
+Agents are usually placed into an environement class and it is that class that
+allows the agent to take actions into the world and that provides the agent with
+the current state.</p>
+
+<p>The environement must provide the agent with a class implementing the {@link
+lnsc.page.State} interface as well as classes implementing the {@link
+lnsc.page.ActionGenerator} interface and the {@link lnsc.page.Action}
+respectively. An environment usually also have a class with the {@link
+lnsc.page.StateGenerator} interface to generate the next states once an agent as
+choosen an action.</p>
+
+<p>Since some agents are doing search internally (specially in deterministic
+environment), an agent can also have its own sets of classes implementing
+{@link lnsc.page.State}, {@link lnsc.page.Action}, {@link
+lnsc.page.StateGenerator}, and {@link lnsc.page.ActionGenerator} to do its
+internal search. The state generator is first use to transform the environment
+state into its internal state, and it can then use its own set of classes to
+perform a search in its <i>head</i>. Those classes depend on the amount of
+knowledge an agent might have of the environment as opposed to the environment
+classes who have full knowledge of it. The environment itself may have two sets
+of states and actions, one for its internal model of the world, and one with
+only the information accessible to the agent.
+{@link lnsc.page.StateRepresentation} and {@link lnsc.page.ActionRepresentation}
+interfaces are for agents and/or algorithms who require real-vector state or
+action representation.</p>
+
+<p>The package also has some generic environement simulator that work on any
+state/action/generator environment with certain properties as well as some
+generic search and learning algorithms that work on any
+state/action/generator/representation agent.</p>
+
+<h2>Changes in 1.1</h2>
+
+<p>The {@link lnsc.page.State} and {@link lnsc.page.ActionGenerator} interface 
+has been extended to better support long list of actions and depth search by 
+having a new method for returning an {@link Enumerator} of action instead of an 
+array of actions. Defaults implementation in abstract base classes creates 
+default enumerator reading the array of previous methods. </p>
+
+<p>The {@link lnsc.page.State} interface has been extended to better support 
+partially observable states (in code as !isObservable) and allow environment to 
+automatically convert them into states that can be observed by the agent. By 
+default, older packages states requiring this librairy (version 1) will 
+be considered observable and the default implementation provided by 
+{@link lnsc.page.AbstractState} will provide the missing interface (return the 
+state itself). The format is such that if multiple agent can observe a state
+at the same time, a list of state is returned. In the same spirit, 
+{@link lnsc.page.AbstractStateWithGen} now requires an extra 
+{@link lnsc.page.StateGenerator} for partially observable state.  
+{link lnsc.page.SingleAgentEnvironment} has been updated to automatically
+handle such states space.</p>
+
+<p>State and Agent interfaces now have a toDataSet method. Default null 
+implementation is provided in abstract classes. There are now new Observable
+agents and environments, who can use that DataSet description to notify 
+obervers of the current agents and environment state. 
+{@link SingleAgentEnvironment} does it.</p> 
+
+<p>Older code should work without problem if it derives abstract base classes.</p>
+ 
+<p>One changed that has do be accounted in older code is the renaming of 
+getStates for getNextStates in State interface for semantical reason. Also some 
+of the StateGenerator and ActionGenerator property have been duplicated into 
+State and these addition may required some code updates. </p>
+
+<h2>Changes in 1.2</h2>
+
+<p>The {@link lnsc.page.StateRepresentation} interface has been extended to 
+better support representation that have internal state that affect their output
+of the current state. This allows support for representation that deal with
+time such as representaiton based on recurrent network, or on delay lines, etc.
+<p>
+
+<p>Basic (@link Object#toString()} method where added.</p>
+
+<h2>Changes in 1.3</h2>
+
+<p>The {@link lnsc.page.Agent}, {@link lnsc.page.StateRepresentation}, and  
+{@link lnsc.page.ActionRepresentation} interface has been extended to force 
+support of Serialization. For {@link lnsc.page.AbstractObservableAgent}, 
+obervers are not part of the serialization process (they are lost in the 
+serialization process). Also note that non-stateless information is also assumed
+lost, i.e. that de-serialization will implied a call to newEpisode in agents, 
+and to reset in state representation. </p>
+
+<p>The code of this library and the conceptual structure of this library are 
+the intellectual property of Francois Rivest. This package was developed for 
+research purpose and any commercial use, and non-educational use is strictly 
+prohibited unless explicit written consent is given by the author Francois 
+Rivest. Copyright 2003-2008.</p>
+
+<!-- Put @see and @since tags here. --></body>
+</html>
